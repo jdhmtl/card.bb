@@ -25,7 +25,7 @@ $router->respond('/calendar/[:year]', function($request, $response, $service) {
 });
 
 $router->respond('/calendar', function($request, $response, $service) {
-	$response->redirect('/calendar/' . date('Y'));
+	$response->redirect('/calendar/2014');
 });
 
 $router->respond('/schedule/[:year]/[:month]/[:day]', function($request, $response, $service) {
