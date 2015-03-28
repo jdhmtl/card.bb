@@ -17,9 +17,9 @@ $router->respond('/', function($request, $response, $service) {
 });
 
 $router->respond('/me', function($request, $response, $service) {
-	$games = Model::factory('App\Models\Game')->findMany();
-	var_dump($games); exit;
-	$service->render('app/templates/views/profile.php');
+	$profile = new \App\Models\Profile();
+	$stats = $profile->getStats();
+	$service->render('app/templates/views/profile.php', ['stats' => $stats]);
 });
 
 $router->respond('/calendar/[:year]', function($request, $response, $service) {
