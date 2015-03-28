@@ -13,10 +13,6 @@ $router->respond(function($request, $response, $service) {
 });
 
 $router->respond('/', function($request, $response, $service) {
-	$service->render('app/templates/views/home.php');
-});
-
-$router->respond('/me', function($request, $response, $service) {
 	$profile = new \App\Models\Profile();
 	$stats = $profile->getStats();
 	$service->render('app/templates/views/profile.php', ['stats' => $stats]);
@@ -56,6 +52,10 @@ $router->respond('/summary/[:game]', function($request, $response, $service) {
 	} catch (Exception $e) {
 		// Shut up
 	}
+});
+
+$router->onHttpError(function($code, $klein) {
+	$klein->response()->redirect('/');
 });
 
 $router->dispatch();
