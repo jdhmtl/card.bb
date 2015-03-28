@@ -1,0 +1,206 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  background: #b0b4a0;
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: "Gotham SSm A", "Gotham SSm B"; }
+
+h1, h2, h3 {
+  font-family: "Knockout 48 A", "Knockout 48 B";
+  text-transform: uppercase;
+  letter-spacing: .1em; }
+
+h2 {
+  font-size: 38px;
+  letter-spacing: 1px;
+  color: #d8dac2; }
+
+.container {
+  width: 1040px;
+  margin: 0 auto; }
+
+.profile-photo {
+  width: 350px;
+  float: left; }
+
+.profile-info {
+  position: relative;
+  background: #101616;
+  width: 650px;
+  float: right;
+  text-align: center;
+  height: 380px; }
+  .profile-info:before, .profile-info:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  .profile-info .profile-text-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; }
+    .profile-info .profile-text-content h1 {
+      color: #d8dac2;
+      font-size: 32px; }
+      .profile-info .profile-text-content h1:before {
+        content: "";
+        width: 80px;
+        height: 2px;
+        display: block;
+        margin-top: 0;
+        background: #ff4a12;
+        margin: 4% auto; }
+        .profile-info .profile-text-content h1:before:after {
+          content: '';
+          display: block;
+          width: 80px;
+          height: 2px; }
+    .profile-info .profile-text-content .game-attended {
+      color: #456a6a;
+      font-size: 58px;
+      text-transform: uppercase;
+      font-family: "Knockout 49 A", "Knockout 49 B";
+      letter-spacing: 2px; }
+    .profile-info .profile-text-content .game-attended-num {
+      font-family: "Gotham SSm A", "Gotham SSm B";
+      color: #d8dac2;
+      font-size: 108px;
+      font-weight: 800;
+      display: block; }
+
+.row-four-square-wrap, .row {
+  clear: both;
+  margin-bottom: 10px; }
+  .row-four-square-wrap:before, .row-four-square-wrap:after, .row:before, .row:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+.square {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  text-align: center;
+  float: left;
+  margin-right: 10px; }
+
+.sqaure:nth-child {
+  margin-right: 0; }
+
+.square-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; }
+
+.medium {
+  background: #456a6a; }
+  .medium .sub {
+    color: #101616; }
+
+.dark {
+  background: #101616; }
+
+.sub {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #3e4f4f;
+  text-transform: uppercase; }
+
+.regular-digits {
+  color: #d8dac2;
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: 800;
+  display: block; }
+  .regular-digits:before {
+    content: "";
+    width: 40px;
+    height: 1px;
+    display: block;
+    margin-top: 0;
+    background: #ff4a12;
+    margin: 0px 20px 20px 0;
+    display: inline-block;
+    line-height: 60px; }
+    .regular-digits:before:after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px; }
+  .regular-digits:after {
+    content: "";
+    width: 40px;
+    height: 1px;
+    display: block;
+    margin-top: 0;
+    background: #ff4a12;
+    margin: 0px 0px 20px 20px;
+    display: inline-block;
+    line-height: 60px; }
+    .regular-digits:after:after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px; }
+
+.big-heading {
+  font-size: 72px;
+  font-family: "Knockout 49 A", "Knockout 49 B"; }
+
+.light {
+  background: #d8dac2; }
+
+.big-square-row {
+  margin-top: 10px !important; }
+
+.big-square {
+  width: 510px;
+  min-height: 510px;
+  position: relative;
+  text-align: center; }
+
+.big-digits {
+  color: #456a6a;
+  font-size: 118px;
+  font-weight: 800; }
+
+.big-square-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; }
