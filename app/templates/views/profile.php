@@ -53,6 +53,69 @@
 			<span class="big-digits">05</span>
 		</div>
 	</div>
+	<div class="big-square dark right-dark-big-square stolen">
+		<div class="big-square-content ">
+			<h1 class="big-heading"> Stolen bases</h1>
+			<span class="sub">Number of stolen bases witnessed</span>
+			<span class="big-digits"><?= $this->stats['stolenbases']; ?></span>
+		</div>
+	</div>
+
+</div>
+
+<div class="last-row row">
+	<div class='recto-square-wrap'>
+		<div class="square dark">
+			<div class="square-text">
+				<h2>Fast ball</h2>
+				<span class="sub">Speedies witnessed</span>
+				<span class="regular-digits">210</span>
+			</div>
+		</div>
+
+		<div class="square light-box last">
+			<div class="square-text">
+				<h2>Strike outs</h2>
+				<span class="sub">Strike outs witnessed</span>
+				<span class="regular-digits"><?= $this->stats['strikeouts']; ?></span>
+			</div>
+		</div>
+
+		<div class="square dark">
+			<div class="square-text">
+				<h2>Double play</h2>
+				<span class="sub">Double plays witnessed</span>
+				<span class="regular-digits"><?= $this->stats['doubleplays']; ?></span>
+			</div>
+		</div>
+
+		<div class="square light-box last">
+			<div class="square-text">
+				<h2>triple play</h2>
+				<span class="sub">triple plays witnessed</span>
+				<span class="regular-digits"><?= $this->stats['tripleplays']; ?></span>
+			</div>
+		</div>
+
+		<div class="highest-score">
+			<div class="highest-score-content">
+				<div class="square-text">
+					<h2>Highest Score</h2>
+					<span class="sub">Highest score witnessed</span>
+					<span class="regular-digits"><?= $this->stats['hsbt']; ?></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="recto perfect-game">
+		<div class="perfect-game-content">
+			<h1 class="big-heading"> Perfect game</h1>
+			<span class="sub">Perfect game witnessed</span>
+			<p>A perfect game is defined by Major League Baseball as a game in which a pitcher (or combination of pitchers) pitches a victory that lasts a minimum of nine innings and in which no opposing player reaches base</p>
+			<span class="big-digits">ZERO</span>
+		</div>
+	</div>
 </div>
 
 <?php /*
