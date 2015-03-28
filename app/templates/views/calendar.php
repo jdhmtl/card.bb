@@ -8,7 +8,7 @@ for ($month = 1; $month <= 12; $month++):
 
 	?>
 
-	<table>
+	<table class="calendar">
 		<tr>
 			<th colspan="7"><?= date('F Y', $time); ?></th>
 		</tr>
@@ -23,7 +23,9 @@ for ($month = 1; $month <= 12; $month++):
 				<?php endif; ?>
 
 				<?php while ($row < 7 && $day <= $end): ?>
-					<td><?= $day; ?></td>
+					<td>
+						<a href="#" data-date="<?= $this->year . '/' . str_pad($month, 2, '0', STR_PAD_LEFT) . '/' . str_pad($day, 2, '0', STR_PAD_LEFT); ?>"><?= $day; ?></a>
+					</td>
 					<?php $day++; $row++; ?>
 				<?php endwhile; ?>
 

@@ -35,6 +35,9 @@ $router->respond('/calendar', function($request, $response, $service) {
 $router->respond('/schedule/[:year]/[:month]/[:day]', function($request, $response, $service) {
 	$game = new App\SportsData\Game(getenv('API_KEY'));
 	$schedule = $game->schedule($request->year, $request->month, $request->day);
+
+	echo json_encode($schedule);
+	exit;
 });
 
 $router->respond('/summary/[:game]', function($request, $response, $service) {
