@@ -1,0 +1,29 @@
+#calendars {
+	width: 60%;
+	float: left;
+}
+#games {
+	width: 35%;
+	float: left;
+	margin: 50px 0 0 20px;
+}
+
+.calendar {
+	font-size: 1.2em;
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.calendar th {
+	font-weight: 800;
+}
+
+.calendar td {
+	padding: 5px;
+	text-align: right;
+}
+
+.calendar a, #games a {
+	color: #456A6A;
+	text-decoration: none;
+}

@@ -14,7 +14,7 @@
 <div class="row-four-square-wrap">
 	<div class="square dark">
 		<div class="square-text">
-			<h2>Homeruns</h2>
+			<h2>Home Runs</h2>
 			<span class="sub">Home Runs witnessed</span>
 			<span class="regular-digits"><?= $this->stats['homeruns']; ?></span>
 		</div>

@@ -9,7 +9,7 @@ $router = new \Klein\Klein();
 
 $router->respond(function($request, $response, $service) {
 	$service->layout('app/templates/layouts/default.php');
-	$service->title = 'Project Title';
+	$service->title = 'Fan Card';
 });
 
 $router->respond('/', function($request, $response, $service) {

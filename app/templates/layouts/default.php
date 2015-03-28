@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6832954/712126/css/fonts.css">
 		<link rel="stylesheet" href="/assets/css/style.css">
+		<link rel="stylesheet" href="/assets/css/cal.css">
 		<title><?= $this->title; ?></title>
 	</head>
 	<body>
