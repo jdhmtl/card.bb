@@ -149,7 +149,7 @@ h2 {
 
 .regular-digits {
   color: #d8dac2;
-  font-size: 48px;
+  font-size: 44px;
   line-height: 60px;
   font-weight: 800;
   display: block; }
@@ -280,4 +280,4 @@ h2 {
   width: 100%; }
 
 .highest-score-content .sub {
-  color: #d8dac2; }
+  color: #101616; }
