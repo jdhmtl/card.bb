@@ -1,0 +1,248 @@
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+
+body{
+	background:#b0b4a0;
+	font-size:14px;
+	line-height: 1.4;
+	font-family: $font-stack;
+}
+
+h1,h2,h3{
+	font-family:$heading-small;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+
+}
+
+h2{
+	font-size: 38px;
+	letter-spacing: 1px;
+	color:$light;
+}
+
+.container{
+	width:1040px;
+	margin:0 auto;
+
+}
+
+.profile-photo{
+	width:350px;
+position: relative;
+	float:left;
+	border-right:10px solid #b0b4a0;
+	z-index:10;
+}
+.profile-info{
+	@include clearfix;
+	position:relative;
+	background:$dark-blue;
+	width:640px;
+	float:right;
+	text-align:center;
+	height:380px;
+	margin-right:10px;
+		.profile-text-content{
+			@include centerer;
+			width:100%;
+				h1{
+					color:$light;
+					font-size:32px;
+						&:before{
+						@include after-top-deco (80px, 2px, 0, $orange);
+						margin:4% auto;
+					}
+				}
+				.game-attended{
+					color:#456a6a;
+					font-size:58px;
+					text-transform: uppercase;
+					font-family:$heading-big;
+					letter-spacing: 2px;
+				}
+				.game-attended-num{
+					font-family: $font-stack;
+					color:$light;
+					font-size:108px;
+					font-weight:800;
+					display: block;
+				}
+		}
+}
+
+.row-four-square-wrap, .row{
+	@include clearfix;
+	clear:both;
+	margin-bottom: 10px;
+	
+}
+
+
+.square{
+	width: 250px;
+	height:250px;
+	position: relative;
+	text-align: center;
+	float:left;
+	margin-right:10px;
+
+}
+
+.sqaure:nth-child{
+	margin-right:0;
+}
+
+.square-text{
+	@include centerer;
+	width:100%;
+}
+
+.medium{
+	background: #456a6a;
+		.sub{
+			color:$dark-blue;
+		}
+}
+
+.dark{
+	background: $dark-blue;
+}
+
+.sub{
+	font-size:10px;
+	letter-spacing: 2px;
+	color:$blue;
+	text-transform:uppercase;
+	display: block;
+}
+
+.regular-digits{
+	color:$light;
+	font-size:48px;
+	line-height: 60px;
+	font-weight: 800;
+	display: block;
+		&:before{
+			@include after-top-deco (40px, 1px, 0, $orange);
+			margin:0px 20px 20px 0 ;
+			display:inline-block;
+			line-height: 60px;
+		}
+		&:after{
+			@include after-top-deco (40px, 1px, 0, $orange);
+			margin:0px 0px 20px 20px ;
+			display:inline-block;
+			line-height: 60px;
+		}
+}
+
+.big-heading{
+	font-size:72px;
+	font-family: $heading-big;
+
+}
+
+.light{
+	background: $light;
+}
+
+
+.big-square-row{
+	margin-top:10px !important;
+}
+.big-square {
+	width:510px;
+	min-height:510px;
+	position: relative;
+	text-align: center;
+	background: url("../img/diamond.png") no-repeat 50% 50%  $light;
+	float:left;
+
+}
+
+
+.right-dark-big-square{
+	background:$dark-blue;
+	float:right;
+	margin-right:10px;
+	color:$light;
+}
+
+.big-digits{
+	color:#456a6a;
+	font-size:118px;
+font-weight: 800;}
+
+.big-square-content{
+	@include centerer;
+	width:100%;
+}
+
+.recto{
+	background: $dark-blue;
+	width:510px;
+	height:800px;
+	position: relative;
+	text-align:center;
+	float:left;
+}
+
+.perfect-game-content{
+	width:100%;
+	@include centerer;
+	 p{
+	 	color:$light;
+	 	padding:20px 60px;
+	 }
+	 h1{
+	 	color:$light;
+	 }
+}
+
+.stolen{
+		background: url("../img/base.png") no-repeat 50% 50%  $dark-blue;
+			h1, .big-digits{
+				color:$light;
+			}
+
+}
+
+.recto-square-wrap{
+	width:510px;
+	float:right;
+
+	margin-right:10px;
+		.square{
+			float:left;
+			margin-bottom:10px;
+			
+		
+
+		}
+}
+
+.last{
+	margin-right:0;
+}
+
+.light-box{
+	background: $light;
+	h2,.regular-digits{
+		color:$dark-blue;
+	}
+}
+.highest-score{
+	background: #3e4f4f;
+	position:relative;
+	width:100%;
+	height:280px;
+	clear:both;
+	text-align:center;
+}
+
+.highest-score-content{
+	@include centerer;
+	width:100%;
+}

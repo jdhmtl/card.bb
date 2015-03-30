@@ -72,6 +72,7 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
     width: 100%; }
     .profile-info .profile-text-content h1 {
       color: #d8dac2;
@@ -128,6 +129,7 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   width: 100%; }
 
 .medium {
@@ -216,6 +218,7 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   width: 100%; }
 
 .recto {
@@ -231,7 +234,8 @@ h2 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%); }
   .perfect-game-content p {
     color: #d8dac2;
     padding: 20px 60px; }
@@ -272,4 +276,5 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   width: 100%; }
