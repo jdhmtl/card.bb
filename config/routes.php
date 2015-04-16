@@ -1,25 +1,13 @@
 <?php
 
-require_once 'vendor/autoload.php';
-
-Dotenv::load(__DIR__);
-ORM::configure('sqlite:./app/storage/bb.sq3');
-
-$router = new \Klein\Klein();
-
-$router->respond(function($request, $response, $service) {
-	$service->layout('app/templates/layouts/default.php');
-	$service->title = 'Fan Card';
-});
-
 $router->respond('/', function($request, $response, $service) {
 	$profile = new \App\Models\Profile();
 	$stats = $profile->getStats();
-	$service->render('app/templates/views/profile.php', ['stats' => $stats]);
+	$service->render(VIEWS_DIR . 'profile.php', ['stats' => $stats]);
 });
 
 $router->respond('/calendar/[:year]', function($request, $response, $service) {
-	$service->render('app/templates/views/calendar.php', [
+	$service->render(VIEWS_DIR . 'calendar.php', [
 		'year' => $request->year,
 	]);
 });
@@ -53,9 +41,3 @@ $router->respond('/summary/[:game]', function($request, $response, $service) {
 		// Shut up
 	}
 });
-
-$router->onHttpError(function($code, $klein) {
-	$klein->response()->redirect('/');
-});
-
-$router->dispatch();

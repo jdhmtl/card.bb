@@ -3,7 +3,8 @@
 		"klein/klein": "~2.0",
 		"guzzlehttp/guzzle": "~5.0",
 		"vlucas/phpdotenv": "~1.1",
-		"j4mie/paris": "~1.5"
+		"j4mie/paris": "~1.5",
+		"rhumsaa/uuid": "~2.8"
 	},
 	"autoload": {
 		"psr-4": {
