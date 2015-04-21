@@ -1,36 +1,36 @@
 <?php
 
-$router->respond('/', function($request, $response, $service) {
+$router->respond('/', function() use ($router) {
 	$profile = new \App\Models\Profile();
 	$stats = $profile->getStats();
-	$service->render(VIEWS_DIR . 'profile.php', ['stats' => $stats]);
+	$router->service()->render(VIEWS_DIR . 'profile.php', ['stats' => $stats]);
 });
 
-$router->respond('/calendar/[:year]', function($request, $response, $service) {
-	$service->render(VIEWS_DIR . 'calendar.php', [
-		'year' => $request->year,
+$router->respond('/calendar/[:year]', function() use ($router) {
+	$router->service()->render(VIEWS_DIR . 'calendar.php', [
+		'year' => $router->request()->year,
 	]);
 });
 
-$router->respond('/calendar', function($request, $response, $service) {
-	$response->redirect('/calendar/2014');
+$router->respond('/calendar', function() use ($router) {
+	$router->response()->redirect('/calendar/2014');
 });
 
-$router->respond('/schedule/[:year]/[:month]/[:day]', function($request, $response, $service) {
+$router->respond('/schedule/[:year]/[:month]/[:day]', function() use ($router) {
 	$game = new App\SportsData\Game(getenv('API_KEY'));
-	$schedule = $game->schedule($request->year, $request->month, $request->day);
+	$schedule = $game->schedule($router->request()->year, $router->request()->month, $router->request()->day);
 
 	echo json_encode($schedule);
 	exit;
 });
 
-$router->respond('/summary/[:game]', function($request, $response, $service) {
+$router->respond('/summary/[:game]', function() use ($router) {
 	$game = new App\SportsData\Game(getenv('API_KEY'));
-	$summary = $game->summary($request->game);
+	$summary = $game->summary($router->request()->game);
 
 	$record = Model::factory('App\Models\Game')->create();
 
-	$record->id = $request->game;
+	$record->id = $router->request()->game;
 	foreach ($summary as $key => $value) {
 		$record->{$key} = $value;
 	}

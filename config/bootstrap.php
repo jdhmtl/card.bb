@@ -15,9 +15,9 @@ define('VIEWS_DIR',   dirname(__DIR__) . '/app/templates/views/');
 
 $router = new \Klein\Klein();
 
-$router->respond(function($request, $response, $service) {
-	$service->layout(LAYOUTS_DIR . 'default.php');
-	$service->title = 'Fan Card';
+$router->respond(function() use ($router) {
+	$router->service()->layout(LAYOUTS_DIR . 'default.php');
+	$router->service()->title = 'Fan Card';
 });
 
 require_once __DIR__ . '/routes.php';
