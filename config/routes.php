@@ -12,7 +12,7 @@ $router->respond('/calendar/?[i:year]?', function() use ($router) {
 });
 
 $router->respond('/schedule/[:year]/[:month]/[:day]', function() use ($router) {
-	$game = new App\SportsData\Game(getenv('API_KEY'));
+	$game = $router->app()->game();
 	$schedule = $game->schedule($router->request()->year, $router->request()->month, $router->request()->day);
 
 	echo json_encode($schedule);
@@ -20,7 +20,7 @@ $router->respond('/schedule/[:year]/[:month]/[:day]', function() use ($router) {
 });
 
 $router->respond('/summary/[:game]', function() use ($router) {
-	$game = new App\SportsData\Game(getenv('API_KEY'));
+	$game = $router->app()->game();
 	$summary = $game->summary($router->request()->game);
 
 	$record = Model::factory('App\Models\Game')->create();

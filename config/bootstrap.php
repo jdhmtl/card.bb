@@ -16,6 +16,12 @@ define('VIEWS_DIR',   dirname(__DIR__) . '/app/templates/views/');
 $router = new \Klein\Klein();
 
 $router->respond(function() use ($router) {
+	$router->app()->register('session', function() { return new App\Session; });
+	$router->app()->register('guzzle', function() { return new GuzzleHttp\Client; });
+	$router->app()->register('game', function() use ($router) {
+		return new App\SportsData\Game($router->app()->guzzle(), getenv('API_KEY'));
+	});
+
 	$router->service()->layout(LAYOUTS_DIR . 'default.php');
 	$router->service()->title = 'Fan Card';
 });

@@ -10,8 +10,8 @@ class SportsData {
 
 	protected $base = 'http://api.sportsdatallc.org/mlb-t5';
 
-	public function __construct($key) {
-		$this->Guzzle = new Guzzle();
+	public function __construct(Guzzle $guzzle, $key) {
+		$this->Guzzle = $guzzle;
 		$this->key = $key;
 	}
 }
