@@ -6,14 +6,9 @@ $router->respond('/', function() use ($router) {
 	$router->service()->render(VIEWS_DIR . 'profile.php', ['stats' => $stats]);
 });
 
-$router->respond('/calendar/[:year]', function() use ($router) {
-	$router->service()->render(VIEWS_DIR . 'calendar.php', [
-		'year' => $router->request()->year,
-	]);
-});
-
-$router->respond('/calendar', function() use ($router) {
-	$router->response()->redirect('/calendar/2014');
+$router->respond('/calendar/?[i:year]?', function() use ($router) {
+	$year = isset($router->request()->year) ? $router->request()->year : date('Y');
+	$router->service()->render(VIEWS_DIR . 'calendar.php', ['year' => $year]);
 });
 
 $router->respond('/schedule/[:year]/[:month]/[:day]', function() use ($router) {
