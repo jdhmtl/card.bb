@@ -13,6 +13,11 @@ class Session {
 		unset($this->data[$key]);
 	}
 
+	public function destroy() {
+		$this->data = [];
+		session_destroy();
+	}
+
 	public function get($key) {
 		return array_key_exists($key, $this->data) ? $this->data[$key] : null;
 	}

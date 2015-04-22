@@ -10,6 +10,7 @@
 	</head>
 	<body>
 		<div class="container">
+			<?= $this->partial(PARTIALS_DIR . 'flash.php'); ?>
 			<?= $this->yieldView(); ?>
 		</div>
 		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>

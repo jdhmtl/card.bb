@@ -6,6 +6,26 @@ $router->respond('/', function() use ($router) {
 	$router->service()->render(VIEWS_DIR . 'profile.php', ['stats' => $stats]);
 });
 
+$router->get('/login/?', function() use ($router) {
+	$router->app()->userController()->login();
+});
+
+$router->post('/login/?', function() use ($router) {
+	$router->app()->userController()->doLogin();
+});
+
+$router->get('/logout/?', function() use ($router) {
+	$router->app()->userController()->logout();
+});
+
+$router->get('/register/?', function() use ($router) {
+	$router->app()->userController()->register();
+});
+
+$router->post('/register/?', function() use ($router) {
+	$router->app()->userController()->doRegister();
+});
+
 $router->respond('/calendar/?[i:year]?', function() use ($router) {
 	$year = isset($router->request()->year) ? $router->request()->year : date('Y');
 	$router->service()->render(VIEWS_DIR . 'calendar.php', ['year' => $year]);
